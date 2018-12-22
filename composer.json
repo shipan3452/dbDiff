@@ -1,0 +1,10 @@
+{
+    "require": {
+        "mathieuviossat/arraytotexttable": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DbDiff\\": "vendor/dbdiff"
+        }
+    }
+}
