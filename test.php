@@ -7,14 +7,11 @@ $db1 = new \PDO('mysql:dbname=test;host=127.0.0.1', 'user_name', 'password');
 $db2 = new \PDO('mysql:dbname=test;host=127.0.0.1', 'user_name', 'password');
 $diff = new DbDiff($db1, $db2);
 
-ConsoleOutput::getNotExistIndex($diff);exit;
-var_dump($diff->getNotExistIndex());exit;
-//outputNotExistTableCreateSql($diff, $db1, $db2);
-
+//不存在的表
 ConsoleOutput::notExistTable($diff);
+//不存在的字段
 ConsoleOutput::notExistFields($diff);
-exit;
-var_dump($diff->getNotExistFields());
+
 
 /**
  *将新增表sql写入文件
